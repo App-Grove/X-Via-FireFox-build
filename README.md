@@ -2,20 +2,20 @@
 
 昔の Twitter は、投稿の時刻の横に「via Twitter for iPhone」のように、どのアプリから投稿したかを出していました。X via は、それを X に取り戻す Chrome 拡張です。投稿のページで、日付の横に「Twitter for iPhone」などの投稿元をもう一度表示します。時刻を秒まで出すこともできます。
 
+本リポジトリはnaikaku1氏の[X Via](https://github.com/naikaku1/X-Via)の非公式フォークで、FireFox向けビルドの提供を目的としています。
+
 ```
 午後7:30:12 · 2026年10月4日 · Twitter for iPhone · 55.5万 件の表示
 ```
 
 > **非公式の拡張です。** X Corp. とは関係ありません。X の作りが変わると、知らないうちに効かなくなることがあります。
 
-## 入れ方
+## インストール方法
 
-1. このリポジトリをダウンロードする(緑の **Code** → **Download ZIP** で落として展開するか、`git clone`)
-2. `chrome://extensions` を開き、右上の **デベロッパーモード** をオンにする
-3. **パッケージ化されていない拡張機能を読み込む** を押し、`manifest.json` が入っているフォルダを選ぶ
-4. 開いていた X のタブは読み込み直す
-
-Chrome 111 以降が必要です。
+1. ActionsのArtifactsから、`X-Via-FireFox-build.zip`をダウンロードします。
+2. `about:config`で`xpinstall.signatures.required`を`false`にします。
+3. Firefoxのアドオンページ(`about:addons`)で、右上の設定アイコンをクリックし、「ファイルからアドオンをインストール」をクリックします。
+4. ダウンロードした`X-Via-FireFox-build.zip`を選択します。
 
 ## 設定
 
@@ -122,3 +122,7 @@ popup/             設定の画面
 ## ライセンス
 
 [MIT](LICENSE)
+
+## クレジット
+この拡張機能は、ほぼ全てがnaikaku1氏の[X Via](https://github.com/naikaku1/X-Via)からそのまま使用しています。naikaku1氏に感謝を捧げます。
+このリポジトリについて権利を主張するつもりはありません。このリポジトリを元になにかを行う場合、naikaku1氏にクレジットを付与してください。
