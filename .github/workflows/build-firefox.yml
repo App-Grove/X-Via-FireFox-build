@@ -1,0 +1,53 @@
+name: Build Firefox extension
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare Firefox build
+        env:
+          GECKO_ID: "x-via-firefox@app-grove"
+        run: |
+          mkdir -p dist/firefox
+          cp manifest.json dist/firefox/
+          cp -r content popup dist/firefox/
+
+          node <<'NODE'
+          const fs = require("node:fs");
+
+          const id = process.env.GECKO_ID;
+          if (!id) {
+            throw new Error("GitHub Actions variable GECKO_ID が設定されていません");
+          }
+
+          const path = "dist/firefox/manifest.json";
+          const manifest = JSON.parse(fs.readFileSync(path, "utf8"));
+
+          manifest.browser_specific_settings ??= {};
+          manifest.browser_specific_settings.gecko ??= {};
+          manifest.browser_specific_settings.gecko.id = id;
+
+          fs.writeFileSync(path, JSON.stringify(manifest, null, 2) + "\n");
+          NODE
+
+      - name: Package Firefox build
+        run: |
+          cd dist/firefox
+          zip -r ../x-via-firefox.zip manifest.json content popup
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: x-via-firefox
+          path: dist/x-via-firefox.zip
