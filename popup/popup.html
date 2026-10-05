@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>X via</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>X via</h1>
+  </header>
+
+  <section>
+    <div class="row">
+      <div class="row-main">
+        <div class="label">投稿元を表示する</div>
+        <div class="sub">投稿のページで、日付の横に「Twitter for iPhone」などを出す</div>
+      </div>
+      <label class="switch"><input id="enabled" type="checkbox"><span></span></label>
+    </div>
+    <div class="row">
+      <div class="row-main">
+        <div class="label">「Twitter」を「X」と表示する</div>
+        <div class="sub">「Twitter for iPhone」→「X for iPhone」のように、表示だけを書き換える(X から届く名前は今も「Twitter for …」のまま)</div>
+      </div>
+      <label class="switch"><input id="xName" type="checkbox"><span></span></label>
+    </div>
+    <div class="row">
+      <div class="row-main">
+        <div class="label">時刻に秒を出す</div>
+        <div class="sub">投稿のページで「午後7:30」→「午後7:30:12」のように、投稿した時刻を秒まで出す</div>
+      </div>
+      <label class="switch"><input id="seconds" type="checkbox"><span></span></label>
+    </div>
+  </section>
+
+  <footer>変更は開いている X のタブにすぐ反映されます</footer>
+  <script src="popup.js"></script>
+</body>
+</html>

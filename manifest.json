@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "X via",
+  "version": "1.2.0",
+  "minimum_chrome_version": "111",
+  "description": "X の投稿のページで、日付の横に「Twitter for iPhone」などの投稿元をもう一度表示し、時刻を秒まで出せる非公式の拡張",
+  "permissions": ["storage"],
+  "action": { "default_title": "X via", "default_popup": "popup/popup.html" },
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["content/source-label.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["content/bridge.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
