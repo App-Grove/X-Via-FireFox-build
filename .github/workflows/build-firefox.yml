@@ -47,7 +47,7 @@ jobs:
           cd dist/firefox
           zip -r ../x-via-firefox.zip manifest.json content popup
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
-          name: x-via-firefox
           path: dist/x-via-firefox.zip
+          archive: false
