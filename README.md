@@ -47,6 +47,7 @@ Chrome 111 以降が必要です。
 - X のこの窓口には、15 分あたり 180 回の上限があります。投稿を 1 つ開くごとに最大 1 回なので、普通に見ている分には届きません
 - **古い窓口なので、X が塞げば使えなくなります**
 - 設定は、拡張の保存場所(`chrome.storage.local`)と、X のページの localStorage(`xVia.enabled`・`xVia.xName`・`xVia.seconds`)に置きます
+- 詳しくは [プライバシーポリシー](PRIVACY.md) を見てください
 
 ## 自分の拡張に取り込むには
 
@@ -117,6 +118,7 @@ content/
   source-label.js  ページのスクリプトより先に走り、投稿元を問い合わせて日付の横に出す。時刻に秒を足す
   bridge.js        拡張に保存した設定を、ページの localStorage に写して source-label.js に知らせる
 popup/             設定の画面
+icons/             アイコン(icon.svg がストア用、icon-small.svg がツールバー用の元の絵)
 ```
 
 ## ライセンス
