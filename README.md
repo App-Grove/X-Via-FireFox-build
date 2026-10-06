@@ -12,7 +12,7 @@
 
 ## インストール方法
 
-1. ActionsのArtifactsから、`X-Via-FireFox-build.zip`をダウンロードします。
+1. [Actions](https://github.com/App-Grove/X-Via-FireFox-build/actions)のArtifactsから、`X-Via-FireFox-build.zip`をダウンロードします。
 2. `about:config`で`xpinstall.signatures.required`を`false`にします。
 3. Firefoxのアドオンページ(`about:addons`)で、右上の設定アイコンをクリックし、「ファイルからアドオンをインストール」をクリックします。
 4. ダウンロードした`X-Via-FireFox-build.zip`を選択します。
