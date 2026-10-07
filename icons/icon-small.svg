@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- ツールバー・拡張機能の一覧用(16〜48px): 余白なしで大きく描く。投稿の文字の行の下に、青い「via」の札が付く様子 -->
+  <rect width="128" height="128" rx="28" fill="#0f1419"/>
+  <path d="M24 32 H104 M24 52 H80" stroke="#e7e9ea" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="29" cy="88" r="5" fill="#71767b"/>
+  <rect x="42" y="70" width="66" height="36" rx="18" fill="#1d9bf0"/>
+  <g transform="translate(75 88) scale(0.5) translate(-48 -62)" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 52 L24 80 L36 52"/><path d="M50 58 V80"/><circle cx="50" cy="45" r="5.5" fill="#fff" stroke="none"/><ellipse cx="73" cy="69" rx="10" ry="11"/><path d="M83 58 V80"/></g>
+</svg>
